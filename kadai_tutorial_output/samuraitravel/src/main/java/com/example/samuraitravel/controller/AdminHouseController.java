@@ -110,7 +110,7 @@ public class AdminHouseController {
 	public String delete(@PathVariable(name = "id") Integer id, RedirectAttributes redirectAttributes) {
 		houseRepository.deleteById(id);
 
-		redirectAttributes.addFlashAttribute("successMessage" + "民宿を削除しました。");
+		redirectAttributes.addFlashAttribute("successMessage" , "民宿を削除しました。");
 
 		return "redirect:/admin/houses";
 	}
